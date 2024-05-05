@@ -21,4 +21,17 @@ async function actLikeAHuman() {
         'accept-language': 'en-US,en;q=0.9,en;q=0.8'
     });
 
+
+    try {
+        // go to url
+        await page.goto('https://www.carrefourksa.com/mafsau/ar/', {timeout:0});
+
+        // wait for the close button to appear
+        await page.waitForSelector("span.close-button");
+
+        // click the close button
+        await page.click("span.close-button");
+    }catch (e){
+        console.log(e);
+    }
 }
