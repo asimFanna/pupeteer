@@ -39,6 +39,9 @@ async function actLikeAHuman() {
         // wait for the close button to appear
         await page.waitForSelector("span.close-button");
 
+        // wait for a random amount of time between 150 and 1150 milliseconds
+        await wait(Math.random()*1000+150)
+
         // click the close button
         await page.click("span.close-button");
     }catch (e){
