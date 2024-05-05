@@ -48,3 +48,5 @@ async function actLikeAHuman() {
         console.log(e);
     }
 }
+
+actLikeAHuman();
