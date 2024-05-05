@@ -1,5 +1,15 @@
 const puppeteer = require('puppeteer');
 
+async function wait(milliseconds){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve();
+        }, milliseconds);
+    });
+
+}
+
+
 async function actLikeAHuman() {
     // Launch the browser and open a new blank page
     const browser = (await puppeteer.launch({
