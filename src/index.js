@@ -1,3 +1,4 @@
+require('dotenv').config();
 const puppeteer = require('puppeteer');
 
 async function wait(milliseconds){
@@ -34,7 +35,7 @@ async function actLikeAHuman() {
 
     try {
         // go to url
-        await page.goto('https://www.carrefourksa.com/mafsau/ar/', {timeout:0});
+        await page.goto(process.env.URL_TO_GO, {timeout:0});
 
         // wait for the close button to appear
         await page.waitForSelector("span.close-button");
